@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>Travel_Sched</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <h2>Travel Schedule</h2>
+    
+
+    <form id="add-row-form">
+        <input type="date" id="date-input" required placeholder="YYYY-MM-DD">
+        <input type="text" id="destination-input" placeholder="Destination" required>
+        <input type="text" id="transportation-input" placeholder="Transportation" required>
+        <input type="text" id="notes-input" placeholder="Notes">
+        <button type="submit">Add Row</button>
+    </form>
+
+    <table id="schedule-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Destination</th>
+                <th>Transportation</th>
+                <th>Notes</th>
+                <th>Action</th> <!-- Added a new column for the remove button -->
+            </tr>
+        </thead>
+        <tbody id="schedule-body">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script> <!-- Linking to the external JavaScript file -->
+</body>
+</html>
