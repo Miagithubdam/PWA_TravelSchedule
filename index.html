@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="/manifest.json">
     <title>Travel_Sched</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
 </head>
 <body>
     <h2>Travel Schedule</h2>
@@ -33,6 +34,18 @@
         <tbody id="schedule-body">
         </tbody>
     </table>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+              console.log('Service Worker registered with scope:', registration.scope);
+            }).catch(function(error) {
+              console.error('Service Worker registration failed:', error);
+            });
+          });
+        }
+    </script>
 
     <script src="script.js"></script> <!-- Linking to the external JavaScript file -->
 </body>
